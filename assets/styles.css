@@ -33,6 +33,26 @@ label {
     color: #34495e;
 }
 
+a:link {
+  text-decoration: none;
+  font-weight:700;
+}
+
+a:visited {
+  text-decoration: none;
+  font-weight:700;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight:700;
+}
+
+a:active {
+  text-decoration: underline;
+  font-weight:700;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
