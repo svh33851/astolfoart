@@ -9,8 +9,6 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
 body {
-    line-height: 1.7em;
-    font-size: 13px;
 		color: #000000;
 		text-shadow: none;
 /*
@@ -27,28 +25,23 @@ body {
 */
 }
 
-.content {
+p {
 		color: #000000;
 		text-shadow: none;
 		line-height: 1.2em;
 		font-size: 12px;
 }
 
-.title {
-font-size: 16px;
-font-weight: 700;
-margin-bottom:-4px;"
-line-height:1.9em;
+h1 {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom:-4px;"
+	line-height:1.9em;
+	color: black;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: #34495e;
+.title {
+
 }
 
 a:link {
@@ -79,48 +72,76 @@ a:active {
 
 
 /* AUTOSCROLL BANNER */
-#container {
-    margin: 5px 0px 5px 0px;
-    width: 100%;
-    height: 4rem;
-    font-family: Montserrat;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-/*
-    background: #000;
-*/
-    color: #fff;
-}
-#container .scroll {
-/*
-    background: #000;
-*/
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: fit-content;
-    white-space: nowrap;
-    animation: loop 5s linear infinite;
+        /* Container for scrolling effect */
+        .scroll-container {
+            width: 100%; /* Adjust width to your preference */
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /* Image container with animation */
+        .scrolling-image {
+            display: inline-block;
+            animation: scroll 15s linear infinite;
+        }
+
+        /* Scroll animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Make sure the image fills the container */
+        .scrolling-image img {
+            width: 100%;
+            height: auto;
+        }
+
+
+
+
+/* MEDIA QUERIES */
+/* Default background color */
+body { 
+    font-size: 13px; 
+    background-color: white; 
+} 
+  
+/* Extra Small: less than 568px */
+@media (max-width: 568px) { 
+    body { 
+        background-color: yellow; 
+    } 
+} 
+  
+/* Small screens: 568px to 768px */
+@media (min-width: 568px) and (max-width: 768px) { 
+    body { 
+        background-color: rgb(234, 6, 204); /* pinkish */ 
+    } 
+} 
+  
+/* Medium screens: 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    body { 
+        background-color: rgb(13, 190, 234); /* blue */ 
+    } 
 }
 
-@keyframes loop {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(-50%);}
+/* Large screens: 1024px to 1280px */
+@media (min-width: 1024px) and (max-width: 1280px)  { 
+    body { 
+        background-color: lightgreen; 
+    } 
 }
-.item {
-    display: flex;
-    align-items: center;
-    gap: 0 0.2rem;
-    color: #e2e8f0;
-    font-size: .9rem;
-    background-color: #152c41;
-    padding: 0.7rem 1rem;
-    margin: 0rem 1rem;
-    border-radius: 0.4rem;
-    white-space: nowrap;
-    box-shadow:
-    0 0.1rem 0.2rem #00000033,
-    0 0.1rem 0.5rem #0000004d,
-    0 0.2rem 01.5rem #00000066,
+
+/* Extra Large screens: 1280px and above */
+@media (min-width: 1280px)  { 
+    body { 
+        background-color: pink; 
+    } 
 }
