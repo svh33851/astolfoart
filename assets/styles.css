@@ -29,11 +29,9 @@ p {
 		color: #000000;
 		text-shadow: none;
 		line-height: 1.2em;
-		font-size: 12px;
 }
 
 h1 {
-	font-size: 16px;
 	font-weight: 700;
 	margin-bottom:-4px;"
 	line-height:1.9em;
@@ -74,30 +72,31 @@ a:active {
 /* AUTOSCROLL BANNER */
         /* Container for scrolling effect */
         .scroll-container {
-            width: 100%; /* Adjust width to your preference */
+            width: 100%;
             overflow: hidden;
             white-space: nowrap;
         }
 
-        /* Image container with animation */
-        .scrolling-image {
-            display: inline-block;
-            animation: scroll 15s linear infinite;
+        /* Scrolling wrapper with images */
+        .scrolling-wrapper {
+            display: flex;
+            width: 200%; /* Double the width to fit two images side by side */
+            animation: scroll 12s linear infinite;
         }
 
         /* Scroll animation */
         @keyframes scroll {
             0% {
-                transform: translateX(100%);
+                transform: translateX(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
         }
 
-        /* Make sure the image fills the container */
-        .scrolling-image img {
-            width: 100%;
+        /* Image style */
+        .scrolling-wrapper img {
+            width: 50%; /* Each image takes half of the scrolling-wrapper */
             height: auto;
         }
 
@@ -107,41 +106,57 @@ a:active {
 /* MEDIA QUERIES */
 /* Default background color */
 body { 
-    font-size: 13px; 
-    background-color: white; 
+		font-size: 13px; 
+		background-color: white;
+}
+p {font-size: 10px;}
+h1 {font-size: 14px;}
+  
+/* Extra Small (sm): less than 576px */
+@media (max-width: 576px) { 
+    body {background-color: yellow;}
+		p {font-size: 10px;}
+		h1 {font-size: 13px;}
 } 
   
-/* Extra Small: less than 568px */
-@media (max-width: 568px) { 
-    body { 
-        background-color: yellow; 
-    } 
-} 
+/* Small (md): 576px to 768px */
+@media (min-width: 576px) and (max-width: 768px) { 
+    body {background-color: rgb(234, 6, 204);} 
+		p {font-size: 11px;}
+		h1 {font-size: 14px;}
+}
   
-/* Small screens: 568px to 768px */
-@media (min-width: 568px) and (max-width: 768px) { 
-    body { 
-        background-color: rgb(234, 6, 204); /* pinkish */ 
-    } 
-} 
-  
-/* Medium screens: 768px to 1024px */
-@media (min-width: 768px) and (max-width: 1024px) { 
-    body { 
-        background-color: rgb(13, 190, 234); /* blue */ 
-    } 
+/* Medium (lg): 768px to 992px */
+@media (min-width: 768px) and (max-width: 992px) { 
+    body {background-color: rgb(13, 190, 234);} 
+		p {font-size: 12px;}
+		h1 {font-size: 15px;}
 }
 
-/* Large screens: 1024px to 1280px */
-@media (min-width: 1024px) and (max-width: 1280px)  { 
-    body { 
-        background-color: lightgreen; 
-    } 
+/* Large (xl): 992px to 1200px */
+@media (min-width: 992px) and (max-width: 1200px)  { 
+    body {background-color: lightgreen;}
+		p {font-size: 13px;}
+		h1 {font-size: 16px;}
 }
 
-/* Extra Large screens: 1280px and above */
-@media (min-width: 1280px)  { 
-    body { 
-        background-color: pink; 
-    } 
+/* Extra Large (xxl): 1200px to 1600px */
+@media (min-width: 1200px) and (max-width: 1600px)  { 
+    body {background-color: pink;} 
+		p {font-size: 14px;}
+		h1 {font-size: 18px;}
+}
+
+/* Extra Extra Large (xxxl): 1600px to 1920px */
+@media (min-width: 1600px) and (max-width: 1920px)  { 
+    body {background-color: lightblue;} 
+		p {font-size: 15px;}
+		h1 {font-size: 20px;}
+}
+
+/* 4K (x4k): above 1920px */
+@media (min-width: 1920px)  { 
+    body {background-color: lightcoral;} 
+		p {font-size: 16px;}
+		h1 {font-size: 22px;}
 }
