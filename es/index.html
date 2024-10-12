@@ -15,30 +15,6 @@
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 -->
 
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			// Get the user's preferred language
-			var userLang = navigator.language || navigator.userLanguage; 
-
-			// Define language folder mappings
-			var langMap = {
-				'de': '/de/',
-				'es': '/es/',
-				'hi': '/hi/',
-				'ja': '/ja/',
-				'ru': '/ru/',
-				'zh': '/zh/'
-			};
-
-			// Check for each language and redirect
-			for (var lang in langMap) {
-				if (userLang.startsWith(lang)) {
-					window.location.href = langMap[lang];
-					break; // Stop checking once redirected
-				}
-			}
-		});
-	</script>
 </head>
 <body>
 
