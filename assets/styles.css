@@ -50,6 +50,21 @@ a:active {
     height: auto;
 }
 
+.button {
+	background-color:#FD007A;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:1.1em;
+	padding:0.5em 1em;
+	text-decoration:none;
+}
+.button:hover {
+	background-color:#C70060;
+	text-decoration:none;
+}
+
 
 
 /* AUTOSCROLL BANNER */
