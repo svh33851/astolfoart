@@ -218,18 +218,19 @@ BLINK
   animation: blink 1s steps(1, end) infinite;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.blink2 {
+  animation: blink2 1.5s steps(1, end) infinite;
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes blink2 {
+  20%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
 
   .retro-text {
     font-family: 'Comic Sans MS', cursive, sans-serif; /* Retro font */
@@ -248,7 +249,6 @@ BLINK
     text-decoration: underline; /* Underline for links */
   }
 
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
+
+
+
